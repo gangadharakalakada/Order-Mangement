@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'Gangu18/order-management'
-        IMAGE_TAG = "${1.0}"
+        DOCKER_IMAGE = 'YOUR_USERNAME/order-management'
+        IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
     stages {
@@ -38,7 +38,7 @@ pipeline {
                 withCredentials([
                         usernamePassword(
                             credentialsId: 'dockerhub-credentials',
-                            usernameVariable: 'DOCKER_USER',
+                            usernameVariable: 'DOCKER_USERNAME',
                             passwordVariable: 'DOCKER_PASSWORD'
                         )
                     ]) {
