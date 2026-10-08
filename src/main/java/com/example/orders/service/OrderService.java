@@ -32,12 +32,12 @@ public class OrderService {
     }
 
     // Get order by ID
-    public Optional<Order> getOrderById(Long id) {
+    public Optional<Order> getOrderById(String id) {
         return orderRepository.findById(id);
     }
 
     // Update order
-    public Order updateOrder(Long id, Order orderDetails) {
+    public Order updateOrder(String id, Order orderDetails) {
 
         Order existingOrder = orderRepository.findById(id)
                 .orElseThrow(() ->
@@ -53,7 +53,7 @@ public class OrderService {
     }
 
     // Delete order
-    public void deleteOrder(Long id) {
+    public void deleteOrder(String id) {
 
         if (!orderRepository.existsById(id)) {
             throw new RuntimeException("Order not found with id: " + id);

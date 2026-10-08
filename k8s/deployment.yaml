@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: order-management
-          image: gangu45/order-management:latest
+          image: gangu45/order-management:1.0
 
           ports:
             - containerPort: 8080

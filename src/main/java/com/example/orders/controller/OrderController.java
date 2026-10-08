@@ -43,7 +43,7 @@ public class OrderController {
     // GET BY ID
     @GetMapping("/{id}")
     public ResponseEntity<Order> getOrderById(
-            @PathVariable Long id) {
+            @PathVariable String id) {
 
         return orderService.getOrderById(id)
                 .map(ResponseEntity::ok)
@@ -54,7 +54,7 @@ public class OrderController {
     // UPDATE
     @PutMapping("/{id}")
     public ResponseEntity<Order> updateOrder(
-            @PathVariable Long id,
+            @PathVariable String id,
             @RequestBody Order order) {
 
         try {
@@ -73,7 +73,7 @@ public class OrderController {
     // DELETE
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteOrder(
-            @PathVariable Long id) {
+            @PathVariable String id) {
 
         try {
 
