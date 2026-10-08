@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'YOUR_USERNAME/order-management'
+        DOCKER_IMAGE = 'gangu45/order-management'
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
