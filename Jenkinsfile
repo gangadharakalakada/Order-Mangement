@@ -4,11 +4,10 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'gangu45/order-management'
-        IMAGE_TAG = "${BUILD_NUMBER}"
+        IMAGE_TAG = "${3.0}"
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm
